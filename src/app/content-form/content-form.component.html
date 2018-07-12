@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <div>
+        <h1>Create your free profile</h1>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+          <div
+            class="sign-up-form"
+            id="content-form">
+            <div class="form-group">
+              <ul>
+                <li>
+                  <label class="first-label" for="gender">I am</label>
+                  <select
+                    class="form-control"
+                    id="gender"
+                    formControlName="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  <span class="help-block"
+                    *ngIf="!signupForm.get('gender').valid && signupForm.get('gender').touched"
+                  >Please choose data!</span>
+                </li>
+                <li>
+                  <label class="second-label" for="gender">I am looking for</label>
+                  <select
+                    class="form-control"
+                    id="lookingFor"
+                    formControlName="lookingFor">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                  <span class="help-block"
+                    *ngIf="!signupForm.get('lookingFor').valid && signupForm.get('lookingFor').touched"
+                  >Please choose data!</span>
+                </li>
+                <li>
+                  <label class="third-label" for="gender">between</label>
+                  <select
+                    class="form-control"
+                    id="between"
+                    formControlName="between">
+                    <option>18-25</option>
+                    <option>25-35</option>
+                    <option>35-45</option>
+                  </select>
+                  <span class="fourth-label" class="help-block"
+                    *ngIf="!signupForm.get('between').valid && signupForm.get('between').touched"
+                  >Please choose data!</span>
+                </li>
+                <li>
+                  <label for="gender">living in</label>
+                  <select
+                    class="form-control"
+                    id="location"
+                    formControlName="location">
+                    <option>Madrid</option>
+                    <option>London</option>
+                    <option>Paris</option>
+                  </select>
+                  <span class="help-block"
+                    *ngIf="!signupForm.get('location').valid && signupForm.get('location').touched"
+                  >Please choose data!</span>
+                </li>
+                <li>
+                  <button class="btn btn-primary">Following</button>
+                  <span class="help-block"
+                        *ngIf="formRes">
+                    Please enter all the fields!
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </form>
+
+        <h4>Join us to meet people! Today we are more than 900,000 registered</h4>
+
+      </div>
+    </div>
+  </div>
+</div>

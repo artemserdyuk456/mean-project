@@ -1,0 +1,53 @@
+h1, h4 {
+  margin-top: 88px;
+  text-align: center;
+  color: white;
+}
+
+label {
+  position: relative;
+  color: #ffffff;
+}
+
+#content-form li{
+  display: inline-block;
+  margin-left: 20px;
+}
+.form-group {
+  text-align: center;
+  margin-top: 30px;
+}
+select {
+  width: 120px;
+  height: 30px;
+}
+
+.first-label {
+  right: 44px;
+}
+.second-label {
+  right: 6px;
+}
+.third-label {
+  right: 30px;
+}
+.fourth-label {
+  right: 32px;
+}
+
+.btn-primary {
+  padding: 0;
+  width: 120px;
+  height: 28px;
+  background-color: #ff7c2e;
+  border: none;
+}
+
+.help-block {
+  height: 35px;
+  border: 1px solid red;
+  position: absolute;
+  color: red;
+  border-radius: 6px;
+  padding: 6px;
+}

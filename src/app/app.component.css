@@ -1,0 +1,10 @@
+body {
+  background-color: #319dd4;
+  min-height: 100vh;
+}
+.background {
+  background-image: url("../images/dating-hero.jpg");
+  height: 350px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

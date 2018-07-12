@@ -1,0 +1,40 @@
+#header-form-authorization li {
+  display: inline-block;
+}
+label{
+  font-size: 12px;
+  color: #ffffff;
+}
+.form-authorization {
+  margin-top: 15px;
+}
+.input-password {
+  position: relative;
+  bottom: 2px;
+  margin-left: -13px;
+}
+.form-control, .btn-primary {
+  width: 140px;
+  height: 28px;
+}
+
+.btn-primary {
+  padding: 0;
+  position: relative;
+  bottom: 26px;
+  right: 11px;
+  background-color: #319dd4;
+  border: 1px solid #ffffff;
+}
+
+.logo {
+  margin-top: 10px;
+  background-image: url("../../images/logo.png");
+  width: 297px;
+  height: 74px;
+}
+span {
+  font-size: 16px;
+  color: #ffffff;
+
+}
