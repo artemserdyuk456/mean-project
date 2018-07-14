@@ -12,7 +12,7 @@
                 <li>
                   <label class="first-label" for="gender">I am</label>
                   <select
-                    class="form-control"
+                    class="form-control select-one"
                     id="gender"
                     formControlName="gender">
                     <option>Male</option>
@@ -22,10 +22,10 @@
                     *ngIf="!signupForm.get('gender').valid && signupForm.get('gender').touched"
                   >Please choose data!</span>
                 </li>
-                <li>
+                <li class="second-li">
                   <label class="second-label" for="gender">I am looking for</label>
                   <select
-                    class="form-control"
+                    class="form-control select-two"
                     id="lookingFor"
                     formControlName="lookingFor">
                     <option>Male</option>
@@ -35,24 +35,24 @@
                     *ngIf="!signupForm.get('lookingFor').valid && signupForm.get('lookingFor').touched"
                   >Please choose data!</span>
                 </li>
-                <li>
+                <li class="group">
                   <label class="third-label" for="gender">between</label>
                   <select
-                    class="form-control"
+                    class="form-control media-group"
                     id="between"
                     formControlName="between">
                     <option>18-25</option>
                     <option>25-35</option>
                     <option>35-45</option>
                   </select>
-                  <span class="fourth-label" class="help-block"
+                  <span  class="help-block"
                     *ngIf="!signupForm.get('between').valid && signupForm.get('between').touched"
                   >Please choose data!</span>
                 </li>
-                <li>
-                  <label for="gender">living in</label>
+                <li class="group">
+                  <label class="fourth-label" for="gender">living in</label>
                   <select
-                    class="form-control"
+                    class="form-control media-group"
                     id="location"
                     formControlName="location">
                     <option>Madrid</option>
@@ -63,8 +63,8 @@
                     *ngIf="!signupForm.get('location').valid && signupForm.get('location').touched"
                   >Please choose data!</span>
                 </li>
-                <li>
-                  <button class="btn btn-primary">Following</button>
+                <li class="group">
+                  <button class="btn btn-primary media-group">Following</button>
                   <span class="help-block"
                         *ngIf="formRes">
                     Please enter all the fields!

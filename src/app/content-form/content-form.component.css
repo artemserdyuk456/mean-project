@@ -51,3 +51,111 @@ select {
   border-radius: 6px;
   padding: 6px;
 }
+
+
+@media (max-width: 991px) {
+  .select-one, .select-two {
+    width: 280px;
+  }
+  .media-group {
+    width: 180px;
+  }
+  .group {
+    margin-top: 22px;
+  }
+  .first-label {
+    right: 123px;
+  }
+  .second-label {
+    right: 86px;
+  }
+  .third-label {
+    right: 58px;
+  }
+  .fourth-label {
+    right: 62px;
+  }
+  .help-block {
+    height: 0;
+    border: none;
+    padding: 0;
+  }
+  h1 {
+    margin-top: 60px;
+  }
+  h4 {
+    width: 450px;
+    position: relative;
+    margin: 0 auto;
+    top: 25px;
+  }
+}
+@media (max-width: 670px) {
+  .select-one, .select-two {
+    width: 230px;
+  }
+  .media-group {
+    width: 147px;
+  }
+  .first-label {
+    right: 100px;
+  }
+  .second-label {
+    right: 60px;
+  }
+  .third-label,.fourth-label {
+    right: 45px;
+  }
+
+}
+@media (max-width: 570px) {
+  .select-one, .select-two {
+    width: 190px;
+  }
+  .media-group {
+    width: 120px;
+  }
+  .first-label {
+    right: 78px;
+  }
+  .second-label {
+    right: 40px;
+  }
+  .third-label, .fourth-label {
+    right: 28px;
+  }
+}
+@media (max-width: 490px) {
+  .form-control {
+    width: 250px;
+  }
+  .btn-primary {
+    width: 250px;
+    margin-top: 10px;
+  }
+  #content-form li{
+    margin-left: -35px;
+  }
+  h4 {
+    width: auto;
+  }
+  .first-label {
+    right: 110px;
+  }
+  .second-label {
+    right: 70px;
+  }
+  .third-label, .fourth-label {
+    right: 95px;
+  }
+  h1 {
+    width: 180px;
+    margin: 0 auto;
+    margin-top: 60px;
+    font-size: 30px
+  }
+  .second-li {
+    margin-top: 20px;
+  }
+
+}

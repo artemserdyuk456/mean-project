@@ -5,6 +5,7 @@ export  interface AuthorizationDataModel {
 }
 
 export interface SignupFormData {
+  id: string;
   gender: string;
   lookingFor: string;
   between: string;

@@ -8,3 +8,23 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+@media (max-width: 690px) {
+  .background {
+    background-size: 120%;
+    height: 400px;
+  }
+}
+@media (max-width: 570px) {
+  .background {
+    background-size: 170%;
+    height: 470px;
+  }
+}
+@media (max-width: 490px) {
+  .background {
+    background-size: 368%;
+    height: 595px;
+    background-position: -200px;
+  }
+
+}

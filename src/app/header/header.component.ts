@@ -8,6 +8,7 @@ import {AuthorizationDataModel} from '../form.data.model';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  toggle: boolean;
   authorizationForm: FormGroup;
 
   constructor() { }
@@ -18,6 +19,9 @@ export class HeaderComponent implements OnInit {
       'password': new FormControl(null),
       'rememData': new FormControl(null)
     })
+  }
+  toToggleForm() {
+    this.toggle = !this.toggle;
   }
 
   onSubmit(){
