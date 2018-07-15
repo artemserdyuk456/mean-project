@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Subject} from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import {SignupFormData} from './form.data.model';
 
@@ -12,10 +13,24 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   getData() {
-    this.http.get<{message: string, postData: SignupFormData[] }>('http://localhost:3000/api/posts')
+    this.http.
+    get<{message: string, postData: any }>(
+      'http://localhost:3000/api/posts'
+    )
+      .pipe(map(postGetData => {
+        return postGetData.postData.map(post => {
+          return {
+            gender: post.gender,
+            lookingFor: post.lookingFor,
+            between: post.between,
+            location: post.location,
+            id: post._id
+          }
+        })
+      }))
       .subscribe(
-        (servData) => {
-          this.formData = servData.postData;
+        (transformPosts) => {
+          this.formData = transformPosts;
           this.formDataUpdated.next([...this.formData]);
         });
   }
@@ -35,11 +50,22 @@ export class UserService {
       between: between,
       location: location
     };
-    this.http.post<{message: string}>('http://localhost:3000/api/posts', postData)
+    this.http.post<{message: string, postId: string}>('http://localhost:3000/api/posts', postData)
       .subscribe((responseData) => {
-        console.log(responseData.message);
+        const id = responseData.postId;
+        postData.id = id;
         this.formData.push(postData);
         this.formDataUpdated.next([...this.formData]);
       });
+  }
+
+  deletePost( postId: string ) {
+    this.http.delete('http://localhost:3000/api/posts/' + postId)
+      .subscribe(() => {
+        const updatedPosts = this.formData.filter(post => post.id !== postId);
+        this.formData = updatedPosts;
+        this.formDataUpdated.next([...this.formData]);
+      })
+
   }
 }

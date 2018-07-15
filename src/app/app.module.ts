@@ -10,8 +10,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ContentFormComponent } from './content-form/content-form.component';
 import { UserContenComponent } from './user-conten/user-conten.component';
-import { ListUserComponent } from './list-user/list-user.component';
 import {UserService} from './user.service';
+import { UserListComponent } from './user-list/user-list.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 
@@ -23,7 +24,9 @@ import {UserService} from './user.service';
     HeaderComponent,
     ContentFormComponent,
     UserContenComponent,
-    ListUserComponent
+    UserListComponent,
+    MainPageComponent,
+
   ],
   imports: [
     BrowserModule,

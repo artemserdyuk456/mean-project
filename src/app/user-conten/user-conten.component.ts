@@ -24,6 +24,9 @@ export class UserContenComponent implements OnInit, OnDestroy {
 
       );
   }
+  onDelete(postId: string) {
+    this.userService.deletePost(postId);
+  }
 
   ngOnDestroy(){
     this.postsSub.unsubscribe();

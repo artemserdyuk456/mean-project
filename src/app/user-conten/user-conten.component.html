@@ -1,12 +1,16 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
-      <ul class="list-group" *ngFor="let user of postUser">
-        <li class="list-group-item">{{ user.gender}}</li>
-        <li class="list-group-item">{{ user.lookingFor}}</li>
-        <li class="list-group-item">{{ user.between}}</li>
-        <li class="list-group-item">{{ user.location}}</li>
-      </ul>
+      <div *ngFor="let user of postUser">
+        <ul class="list-group" >
+          <li class="list-group-item">{{ user.gender}}</li>
+          <li class="list-group-item">{{ user.lookingFor}}</li>
+          <li class="list-group-item">{{ user.between}}</li>
+          <li class="list-group-item">{{ user.location}}</li>
+        </ul>
+        <button class="btn btn-danger" (click)="onDelete(user.id)">Delete</button>
+      </div>
+
     </div>
   </div>
 </div>

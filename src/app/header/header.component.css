@@ -43,6 +43,20 @@ span {
   font-size: 16px;
   color: #ffffff;
 }
+.user-list {
+  position: relative;
+  cursor: pointer;
+  float: right;
+  bottom: 99px;
+  right: 95px;
+  color: white;
+  border-bottom: 1px solid;
+  text-decoration: none;
+}
+.user-list:hover {
+  color: #ff7c2e;
+  border-bottom: 1px solid #ff7c2e;
+}
 
 @media (max-width: 1200px) {
   .form-group {
@@ -52,7 +66,7 @@ span {
 
 @media (max-width: 995px) {
   .form-group {
-    margin-left: 45px;
+    margin-left: 0;
   }
   .logo {
     background-size: 70%;
@@ -106,10 +120,14 @@ span {
 @media (max-width: 768px) {
   .form-group {
     margin-left: 0;
+    margin-top: 15px;
   }
   .logo {
     margin:  0 auto;
-    left: 90px;
+    left: 30px;
+  }
+  .logo-theme {
+    left: 5px;
   }
   .the {
     text-align: center;
@@ -128,6 +146,16 @@ span {
     margin-left: -46px;
   }
 }
+@media (max-width: 768px) {
+  .logo {
+    margin:  0 auto;
+    left: 70px;
+  }
+  .user-list {
+    bottom: 180px;
+    right: 75px;
+  }
+}
 @media (max-width: 586px) {
   .logo {
     left: 50px;
@@ -135,8 +163,18 @@ span {
   .logo-theme {
     left: -7px;
   }
+  .user-list {
+    right: 40px;
+  }
 }
-@media (max-width: 520px) {
+@media (max-width: 528px) {
+
+}
+@media (max-width: 528px) {
+  .user-list {
+    right: 5px;
+    bottom: 70px;
+  }
   .mobile {
     display: block;
   }
@@ -157,7 +195,7 @@ span {
     margin: 0 auto;
     width: 185px;
     height: 28px;
-    right: 17px;
+    right: 16px;
   }
   .form-group {
     margin-top: 5px;
@@ -175,11 +213,14 @@ span {
     font-size: 14px;
   }
   .remember-data {
-    margin-left: -100px;
+    margin-left: -90px;
   }
   .logo {
     left: 40px;
     width: 245px;
+  }
+  .already {
+    left: 10px;
   }
 
 }

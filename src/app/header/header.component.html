@@ -40,18 +40,21 @@
                   <label for="password">Did you forget your password?</label>
                 </li>
                 <li>
+
                   <button class="btn btn-primary" type="submit">Sign in</button>
                 </li>
               </ul>
             </div>
           </div>
         </form>
+
       </div>
+   <a class="user-list">User list</a>
 
 
       <div class="mobile">
         <div class="dropdown">
-          <button  (click)="toToggleForm()" class="btn btn-primary">
+          <button  (click)="toToggleForm()" class="btn btn-primary already">
             Already you have a profile?
           </button>
           <div  *ngIf="toggle">
@@ -81,7 +84,6 @@
               <button type="submit" class="btn btn-primary submit">Sign in</button>
             </form>
           </div>
-
         </div>
       </div>
 

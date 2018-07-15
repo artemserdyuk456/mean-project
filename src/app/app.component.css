@@ -20,7 +20,7 @@ body {
     height: 470px;
   }
 }
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .background {
     background-size: 368%;
     height: 595px;
