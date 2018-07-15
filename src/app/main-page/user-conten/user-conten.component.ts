@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {UserService} from '../user.service';
+import {UserService} from '../../user.service';
 import {Subscription} from 'rxjs';
-import {SignupFormData} from '../form.data.model';
+import {SignupFormData} from '../../form.data.model';
 
 
 @Component({

@@ -58,7 +58,6 @@ export class UserService {
         this.formDataUpdated.next([...this.formData]);
       });
   }
-
   deletePost( postId: string ) {
     this.http.delete('http://localhost:3000/api/posts/' + postId)
       .subscribe(() => {
@@ -66,6 +65,5 @@ export class UserService {
         this.formData = updatedPosts;
         this.formDataUpdated.next([...this.formData]);
       })
-
   }
 }

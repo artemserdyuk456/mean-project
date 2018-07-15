@@ -1,0 +1,29 @@
+.nav-bar {
+  height: 65px;
+  background-color: #209734;
+}
+
+.nav-user-list li {
+  margin-right: 70px;
+  display: inline-block;
+}
+.nav-user-list {
+  margin-top: 13px;
+  float: right;
+}
+.create {
+  height: 43px;
+  width: 150px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/*.right {*/
+  /*float: right;*/
+/*}*/
+/*!*.left {*!*/
+  /*!*float: right;*!*/
+/*!*}*!*/
+

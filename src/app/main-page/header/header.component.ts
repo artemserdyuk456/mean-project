@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {AuthorizationDataModel} from '../form.data.model';
+import {AuthorizationDataModel} from '../../form.data.model';
 
 @Component({
   selector: 'app-header',

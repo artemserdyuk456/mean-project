@@ -2,14 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
-// import {AppRoutingModule} from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { ContentFormComponent } from './content-form/content-form.component';
-import { UserContenComponent } from './user-conten/user-conten.component';
+import { HeaderComponent } from './main-page/header/header.component';
+import { ContentFormComponent } from './main-page/content-form/content-form.component';
+import { UserContenComponent } from './main-page/user-conten/user-conten.component';
 import {UserService} from './user.service';
 import { UserListComponent } from './user-list/user-list.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -33,8 +32,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-
-    // AppRoutingModule
+    AppRoutingModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
