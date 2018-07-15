@@ -3,9 +3,10 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12">
         <div >
+          <button class="btn back" (click)="goToMainPage()"><span class="glyphicon glyphicon-arrow-left"></span></button>
           <ul class="nav-user-list">
             <li class="left">
-                <button class="btn create">
+                <button class="btn create" (click)="createNewUser()">
                   <span class="glyphicon glyphicon-plus"></span>
                   Create user
                 </button>
@@ -22,32 +23,36 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
-      <table class="table table-bordered">
+      <table class="table table-bordered" >
         <thead>
         <tr>
           <th scope="col">User</th>
-          <th scope="col">User</th>
-          <th scope="col">Save changes</th>
-          <th scope="col">Delete user</th>
+          <th class="th-role" scope="col">User role</th>
+          <th class="th-admin" scope="col">Add Photo</th>
+          <th class="th-admin" scope="col">Edit</th>
+          <th class="th-admin" scope="col">Save changes</th>
+          <th class="th-admin" scope="col">Delete user</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody class="user-list-group" *ngFor="let user of postUser">
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <th scope="row"><p>{{user.gender}}</p></th>
+          <td class="form-role">
+            <form id="role-form" [formGroup]="createRole" (ngSubmit)="onSaveChanges()">
+              <select
+                class="form-control role"
+                id="role"
+                formControlName="role">
+                <option>User</option>
+                <option>Moderator</option>
+                <option>Administrator</option>
+              </select>
+            </form>
+          </td>
+          <td><span class="glyphicon-plus"></span></td>
+          <td><a>Edit</a></td>
+          <td><a (click)="onSaveChanges()">Save Changes</a></td>
+          <td><a (click)="onDelete(user.id)">Delete user</a></td>
         </tr>
         </tbody>
       </table>

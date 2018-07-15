@@ -2,6 +2,13 @@
   height: 65px;
   background-color: #209734;
 }
+.back {
+  border: 1px solid white;
+  margin-top: 9px;
+  background: transparent;
+  color: white;
+  font-size: 22px;
+}
 
 .nav-user-list li {
   margin-right: 70px;
@@ -20,10 +27,16 @@
   color: #ffffff;
   text-transform: uppercase;
 }
-/*.right {*/
-  /*float: right;*/
-/*}*/
-/*!*.left {*!*/
-  /*!*float: right;*!*/
-/*!*}*!*/
-
+td {
+  width: 111px;
+}
+.th-admin {
+  width: 111px;
+}
+.form-role, .th-role {
+  width: 180px;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}

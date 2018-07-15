@@ -3,7 +3,6 @@ import {UserService} from '../../user.service';
 import {Subscription} from 'rxjs';
 import {SignupFormData} from '../../form.data.model';
 
-
 @Component({
   selector: 'app-user-conten',
   templateUrl: './user-conten.component.html',
